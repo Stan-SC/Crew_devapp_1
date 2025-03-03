@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { ChatOpenAI } from "@langchain/openai";
-import { HumanMessage } from "@langchain/core/messages";
+import { ChatOpenAI } from '@langchain/openai';
+import { HumanMessage } from '@langchain/core/messages';
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 // Configuration OpenAI
 const model = new ChatOpenAI({
   openAIApiKey: process.env.OPENAI_API_KEY,
-  modelName: "gpt-4-turbo-preview",
+  modelName: 'gpt-4-turbo-preview',
   temperature: 0.7
 });
 
