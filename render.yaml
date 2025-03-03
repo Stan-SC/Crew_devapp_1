@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: crew-devteam-1
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GITHUB_API_TOKEN
+        sync: false
+      - key: RENDER_API_KEY
+        sync: false
+    autoDeploy: true 
